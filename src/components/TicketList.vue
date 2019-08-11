@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <ticket-element v-for="ticket of tickets" v-bind:key="concert.date"
-                    v-bind:ticket="ticket"></ticket-element>
+    <ticket-element v-for="ticket of tickets" v-bind:key="ticket.id"></ticket-element>
   </div>
 </template>
 
@@ -24,10 +23,10 @@
     },
 
     created() {
-      getTickets();
+      this.getTickets();
     },
 
-    getTickets() {
+    getTickets: function () {
       axios.get(`https://api.marcoreitano.dev/tickets/search/findByConcert`, {
         params: {
           concerturi: this.concerturi
