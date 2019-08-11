@@ -1,7 +1,9 @@
 <template>
-  <div class="ticketelementcontainer">
-    <p>{{ticket.category}}</p>
-    <p>{{ticket.price}}</p>
+  <div class="ticketelementcontainer box">
+    <div>{{ticket.category}}</div>
+    <div>{{ticket.price}}€</div>
+    <div v-if="ticket.available !== 'available'">Sold out!</div>
+    <div v-else>BUY NOW!</div>
   </div>
 </template>
 
@@ -16,7 +18,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h3 {
-    margin: 40px 0 0;
-  }
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css") screen;
 </style>
