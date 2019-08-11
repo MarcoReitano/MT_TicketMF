@@ -17,6 +17,11 @@
     props: {
       concerturi: String
     },
+    watch: {
+      concerturi: function (newVal, oldVal) { // watch it
+        console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+      }
+    },
 
     data: function () {
       return {
