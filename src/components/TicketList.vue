@@ -24,6 +24,7 @@
     },
 
     created() {
+      console.log(this.concerturi);
       this.getTickets();
     },
     methods:
