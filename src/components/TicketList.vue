@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
-    <ticket-element v-for="ticket of tickets" v-bind:key="ticket.id"></ticket-element>
+  <div class="ticketlistcontainer">
+    <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
+                    v-bind:ticket="ticket"></ticket-element>
   </div>
 </template>
 
@@ -18,27 +19,30 @@
     data: function () {
       return {
         resultData: '',
-        concerts: ''
+        tickets: null
       }
     },
 
     created() {
       this.getTickets();
     },
-
-    getTickets: function () {
-      axios.get(`https://api.marcoreitano.dev/tickets/search/findByConcert`, {
-        params: {
-          concerturi: this.concerturi
+    methods:
+        {
+          getTickets: function () {
+            axios.get(`https://api.marcoreitano.dev/tickets/search/findByConcert`, {
+              params: {
+                concerturi: this.concerturi
+              }
+            })
+            .then(response => {
+              this.tickets = response.data._embedded.tickets;
+              console.log(this.tickets);
+            })
+            .catch(error => {
+              console.log(error);
+            });
+          }
         }
-      })
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-    }
   }
 </script>
 

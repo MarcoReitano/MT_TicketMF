@@ -1,6 +1,7 @@
 <template>
   <div class="ticketelementcontainer">
-
+    <p>{{ticket.category}}</p>
+    <p>{{ticket.price}}</p>
   </div>
 </template>
 
@@ -8,7 +9,7 @@
   export default {
     name: 'TicketElement',
     props: {
-      msg: String
+      ticket: Object
     }
   }
 </script>
