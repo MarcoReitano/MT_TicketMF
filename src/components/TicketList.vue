@@ -24,7 +24,7 @@
     },
 
     created() {
-      console.log(this.concerturi);
+      console.log("ConcertUri" + this.concerturi);
       this.getTickets();
     },
     methods:
