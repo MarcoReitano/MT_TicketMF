@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target wc --name ticketing 'src/components/*.vue'",
+    "buildlocal": "vue-cli-service build --target wc --name ticketing src/components/*.vue",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
