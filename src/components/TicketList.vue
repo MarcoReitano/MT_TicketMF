@@ -20,7 +20,7 @@
     watch: {
       concerturi: function (newVal, oldVal) { // watch it
         if (newVal) {
-          getTickets();
+          this.getTickets();
         }
       }
     },
