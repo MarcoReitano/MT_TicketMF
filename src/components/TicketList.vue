@@ -19,7 +19,9 @@
     },
     watch: {
       concerturi: function (newVal, oldVal) { // watch it
-        console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+        if (newVal) {
+          getTickets();
+        }
       }
     },
 
@@ -30,10 +32,10 @@
       }
     },
 
-    created() {
-      console.log("ConcertUri" + this.concerturi);
-      this.getTickets();
-    },
+    // created() {
+    //   console.log("ConcertUri" + this.concerturi);
+    //   this.getTickets();
+    // },
     methods:
         {
           greet: function (event) {
