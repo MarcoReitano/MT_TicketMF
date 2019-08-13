@@ -3,7 +3,9 @@
     <div>{{ticket.category}}</div>
     <div>{{ticket.price}}€</div>
     <div v-if="ticket.available !== 'available'">Sold out!</div>
-    <div v-else>BUY NOW!</div>
+    <div v-else>
+      <order-add-cart-button></order-add-cart-button>
+    </div>
   </div>
 </template>
 
