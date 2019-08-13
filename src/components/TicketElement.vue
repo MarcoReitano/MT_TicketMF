@@ -2,7 +2,7 @@
   <div class="ticketelementcontainer box">
     <div>{{ticket.category}}</div>
     <div>{{ticket.price}}€</div>
-    <div v-if="ticket.available !== 'available'">Sold out!</div>
+    <div v-if="ticket.availability !== 'available'">Sold out!</div>
     <div v-else>
       <order-add-cart-button></order-add-cart-button>
     </div>
