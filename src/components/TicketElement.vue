@@ -1,4 +1,12 @@
 <template>
+
+  <style>
+    @import "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css";
+    @import "https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css";
+    @import "https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css";
+    @import "https://kit-free.fontawesome.com/releases/latest/css/free.min.css";
+  </style>
+  
   <div class="ticketelementcontainer box">
     <div>{{ticket.category}}</div>
     <div>{{ticket.price}}€</div>
