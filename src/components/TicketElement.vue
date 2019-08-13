@@ -6,18 +6,16 @@
     @import "https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css";
     @import "https://kit-free.fontawesome.com/releases/latest/css/free.min.css";
   </style>
-  
+
   <div class="ticketelementcontainer box">
     <div>{{ticket.category}}</div>
     <div>{{ticket.price}}€</div>
     <div v-if="ticket.availability !== 'available'">
       <button class="button is-primary" disabled>
-            <span class="icon">
-              <i class="fa fa-cart-plus"></i>
-            </span>
-        <span>
-             Sorry, sold out!
-            </span>
+        <span class="icon">
+          <i class="fa fa-cart-plus"></i>
+        </span>
+        <span>Sold out!</span>
       </button>
     </div>
     <div v-else>
