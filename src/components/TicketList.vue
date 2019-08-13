@@ -1,7 +1,6 @@
 <template>
   <div class="ticketlistcontainer">
     TicketList
-    <button v-on:click="greet">Greet</button>
     <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
                     v-bind:ticket="ticket"></ticket-element>
   </div>
@@ -31,16 +30,8 @@
         tickets: null
       }
     },
-
-    // created() {
-    //   console.log("ConcertUri" + this.concerturi);
-    //   this.getTickets();
-    // },
     methods:
         {
-          greet: function (event) {
-            console.log(this.concerturi);
-          },
           getTickets: function () {
             axios.get(`https://api.marcoreitano.dev/tickets/search/findByConcert`, {
               params: {
