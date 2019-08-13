@@ -3,7 +3,7 @@
     <div>{{ticket.category}}</div>
     <div>{{ticket.price}}€</div>
     <div v-if="ticket.availability !== 'available'">
-      <button class="button is-primary">
+      <button class="button is-primary" disabled>
             <span class="icon">
               <i class="fa fa-cart-plus"></i>
             </span>
