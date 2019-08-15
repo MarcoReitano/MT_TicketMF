@@ -1,8 +1,8 @@
 <template>
   <div class="ticketlistcontainer">
     TicketList
-    <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
-                    v-bind:ticket="ticket"></ticket-element>
+    <ticketing-ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
+                              v-bind:ticket="ticket"></ticketing-ticket-element>
   </div>
 </template>
 
