@@ -1,8 +1,8 @@
 <template>
   <div class="ticketlistcontainer">
     TicketList
-    <ticketing-ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
-                              v-bind:ticket="ticket"></ticketing-ticket-element>
+    <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
+                    :ticket="ticket"></ticket-element>
   </div>
 </template>
 
@@ -16,9 +16,14 @@
     props: {
       concerturi: String
     },
+    config: {
+      ignoredElements: [
+        'order-add-cart-button'
+      ]
+    },
     data: function () {
       return {
-        tickets: null
+        tickets: []
       }
     },
     mounted: function () {

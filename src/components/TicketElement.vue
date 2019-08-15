@@ -11,7 +11,7 @@
       </button>
     </div>
     <div v-else>
-      <order-add-cart-button></order-add-cart-button>
+      <order-add-cart-button v-pre></order-add-cart-button>
     </div>
   </div>
 </template>
@@ -21,6 +21,11 @@
     name: 'TicketElement',
     props: {
       ticket: Object
+    },
+    config: {
+      ignoredElements: [
+        'order-add-cart-button'
+      ]
     }
   }
 </script>
