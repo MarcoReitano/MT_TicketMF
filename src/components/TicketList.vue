@@ -3,6 +3,8 @@
     TicketList
     <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
                     v-bind:ticket="ticket"></ticket-element>
+    <ticket-element></ticket-element>
+    <div v-for="ticket in tickets">TICKET</div>
   </div>
 </template>
 
@@ -27,7 +29,7 @@
     data: function () {
       return {
         resultData: '',
-        tickets: null
+        tickets: []
       }
     },
     methods:
