@@ -11,8 +11,8 @@
       </button>
     </div>
     <div v-else>
-      <order-add-cart-button ticketuri={{this.ticket._links.self.href}}
-                             available={{this.ticket.availability}}></order-add-cart-button>
+      <order-add-cart-button :ticketuri="this.ticket._links.self.href"
+                             :available="this.ticket.availability"></order-add-cart-button>
     </div>
   </div>
 </template>
