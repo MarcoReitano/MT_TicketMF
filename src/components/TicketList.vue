@@ -2,7 +2,8 @@
   <div class="ticketlistcontainer">
     TicketList
     <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
-                    :ticket="ticket"></ticket-element>
+                    :ticketuri="ticket._links.self.href"
+                    :available="ticket.availability"></ticket-element>
   </div>
 </template>
 
