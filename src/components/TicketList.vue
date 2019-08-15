@@ -3,8 +3,6 @@
     TicketList
     <ticket-element v-for="ticket in tickets" v-bind:key="ticket.id"
                     v-bind:ticket="ticket"></ticket-element>
-    <ticket-element></ticket-element>
-    <div v-for="ticket in tickets">TICKET</div>
   </div>
 </template>
 
@@ -18,18 +16,20 @@
     props: {
       concerturi: String
     },
+    data: function () {
+      return {
+        tickets: null
+      }
+    },
+    mounted: function () {
+      console.log("Mounted");
+      this.getTickets();
+    },
     watch: {
-      concerturi: function (newVal, oldVal) { // watch it
+      concerturi: function (newVal) { // watch it
         if (newVal) {
           this.getTickets();
         }
-      }
-    },
-
-    data: function () {
-      return {
-        resultData: '',
-        tickets: []
       }
     },
     methods:
