@@ -27,9 +27,6 @@
       ignoredElements: [
         'order-add-cart-button'
       ]
-    },
-    mounted: function () {
-      console.log(this.ticket.availability);
     }
   }
 </script>
